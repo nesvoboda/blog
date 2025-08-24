@@ -7,6 +7,9 @@ import "../styles/global.css";
 // Supports weights 100-900
 import "@fontsource-variable/inter";
 import Pill from "../components/Pill.astro";
+import Experience from "../components/Experience.astro";
+import { Image } from "astro:assets";
+import profileImage from "../assets/profile.jpg";
 ---
 
 <!doctype html>
@@ -15,36 +18,91 @@ import Pill from "../components/Pill.astro";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <div class="max-w-3xl mx-auto mt-20">
+    <div class="max-w-2xl mx-auto mt-20">
       <!-- title -->
 
       <div class="flex gap-6">
-        <img
-          src="/profile.jpg"
+        <Image
+          src={profileImage}
           alt="Arseniy Shishaev"
-          class="w-28 h-28 rounded-full object-cover object-top"
+          width={1000}
+          height={1000}
+          class="rounded-full w-24 h-24 object-cover object-top"
         />
         <div class="flex flex-col gap-3">
           <div class="flex flex-col gap-0.5">
-            <h1 class="text-xl font-bold text-zinc-900">Arseniy Shishaev</h1>
+            <h1 class="text-lg font-semibold mt-1 text-zinc-900">
+              Arseniy Shishaev
+            </h1>
             <!-- subtitle -->
-            <h2 class="text-lg font-light text-zinc-600">
+            <h2 class="text-sm font-light text-zinc-600">
               Entrepreneur, software engineer
             </h2>
           </div>
           <div class="flex gap-2">
-            <Pill href="https://github.com/arseniy-shishaev" text="GitHub" />
+            <Pill href="https://github.com/nesvoboda" text="GitHub" />
             <Pill
               href="https://linkedin.com/in/arseniy-shishaev"
               text="LinkedIn"
             />
-            <Pill href="mailto:arseniy@shishaev.com" text="Email" />
+            <Pill href="mailto:ash@bluco.ai" text="Email" />
           </div>
         </div>
       </div>
 
-      <!-- contact links -->
-      
+      <!-- Navigation Tabs -->
+      <div class="mt-8 border-zinc-200">
+        <nav class="flex gap-6">
+          <button
+            id="about-tab"
+            class="tab-button text-sm pb-1 border-b-1 border-zinc-900 text-zinc-900 font-light"
+          >
+            About
+          </button>
+          <a href="/writing">
+            <button
+              id="writing-tab"
+              class="tab-button text-sm pb-1 border-b-1 border-transparent text-zinc-400 hover:border-zinc-400 hover:border-b-1 font-light"
+            >
+              Writing
+            </button>
+          </a>
+        </nav>
+      </div>
+
+      <!-- About Section -->
+      <div id="about-content" class="tab-content mt-8">
+        <p class="text-zinc-700 leading-relaxed text-sm">
+          I live to build systems that focus on the user. With experience in
+          full-stack development, product management, and business strategy, I
+          work on solutions that are both elegant and scalable.
+        </p>
+
+        <!-- Work Experience Section -->
+        <div class="mt-12">
+          <h3 class="text-sm font-semibold text-zinc-900 mb-6">Work</h3>
+
+          <div class="space-y-8">
+            <!-- Experience 1 -->
+            <Experience
+              link="https://bluco.ai"
+              when="2024 — Now"
+              title="Co-founder & CTO, Bluco"
+              description="Created and scaled an engineering team to build a next-generation recruiting platform. Launched the product, leading design and product management. Implemented a modern tech stack including React, Node.js, and AWS."
+              projects={[]}
+            />
+
+            <!-- Experience 2 -->
+            <Experience
+              link="https://datadoghq.com"
+              when="2021 — 2024"
+              title="Software Engineer, Datadog"
+              description="Worked on the internal Data and Analytics platform, building tools to keep Datadog's data-heavy pipelines running smoothly. The service I worked on was tracking hundreds of millions of data assets using complex recursive queries."
+              projects={[]}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

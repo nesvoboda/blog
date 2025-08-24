@@ -1,0 +1,40 @@
+---
+interface Props {
+  when: string;
+  title: string;
+  description: string;
+  link: string;
+  projects: {
+    image: string;
+    name: string;
+  }[];
+}
+const { when, title, description, link, projects } = Astro.props;
+---
+
+<div class="flex gap-6 items-">
+  <div class="w-26 flex-shrink-0">
+    <span class="text-xs font-light text-zinc-400">{when}</span>
+  </div>
+  <div class="flex-1">
+    <div class="flex items-center gap-2 mb-2">
+      <a href={link} target="_blank">
+        <h4 class="font- text-sm mt-1 text-zinc-900">{title}</h4>
+      </a>
+    </div>
+    <p class="text-sm font-light text-zinc-700 leading-relaxed">
+      {description}
+    </p>
+    <div class="flex gap-2 mt-3">
+      {
+        projects.map((project) => (
+          <img
+            src={project.image}
+            alt={project.name}
+            class="w-16 h-16 rounded object-cover"
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
