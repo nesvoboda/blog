@@ -1,4 +1,4 @@
-conimport { getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
