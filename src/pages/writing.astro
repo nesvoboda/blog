@@ -21,7 +21,7 @@ const posts = (await getCollection("blog")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <div class="max-w-2xl mx-auto mt-20 flex flex-col">
+    <div class="max-w-xs md:max-w-2xl mx-auto mt-20 flex flex-col">
       <!-- title -->
 
       <div class="flex gap-6">
@@ -78,12 +78,10 @@ const posts = (await getCollection("blog")).sort(
           posts.map((post) => (
             <li>
               <a href={`/writing/${post.id}/`}>
-                <div class="flex gap-4 items-center w-full">
-                  <div class="">
-                    <p class="date w-24 text-right text-sm font-light text-zinc-400">
-                      <FormattedDate date={post.data.pubDate} />
-                    </p>
-                  </div>
+                <div class="flex flex-col md:flex-row items-start gap-4 md:items-center w-full">
+                  <p class="date w-24 md:text-right text-sm font-light text-zinc-400">
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
 
                   <h4 class="title flex-3 text-zinc-700 font-regular text-sm">
                     {post.data.title}

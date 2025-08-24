@@ -1,7 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import "../styles/global.css";
 // Supports weights 100-900
@@ -18,7 +16,7 @@ import profileImage from "../assets/profile.jpg";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <div class="max-w-2xl mx-auto mt-20">
+    <div class="max-w-xs md:max-w-2xl mx-auto mt-20">
       <!-- title -->
 
       <div class="flex gap-6">

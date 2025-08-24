@@ -12,16 +12,14 @@ interface Props {
 const { when, title, description, link, projects } = Astro.props;
 ---
 
-<div class="flex gap-6 items-">
-  <div class="w-26 flex-shrink-0">
-    <span class="text-xs font-light text-zinc-400">{when}</span>
-  </div>
-  <div class="flex-1">
-    <div class="flex items-center gap-2 mb-2">
-      <a href={link} target="_blank">
-        <h4 class="font- text-sm mt-1 text-zinc-900">{title}</h4>
-      </a>
-    </div>
+<div class="flex flex-col md:flex-row gap-6 items-">
+  <span class="w-26 md:flex-shrink-0 text-xs font-light text-zinc-400"
+    >{when}</span
+  >
+  <div class="md:flex-1 flex flex-col gap-2">
+    <a href={link} target="_blank">
+      <h4 class="text-sm mt-1 text-zinc-900">{title}</h4>
+    </a>
     <p class="text-sm font-light text-zinc-700 leading-relaxed">
       {description}
     </p>
