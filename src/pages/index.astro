@@ -8,15 +8,17 @@ import Pill from "../components/Pill.astro";
 import Experience from "../components/Experience.astro";
 import { Image } from "astro:assets";
 import profileImage from "../assets/profile.jpg";
+import Posthog from "../components/posthog.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <Posthog />
   </head>
   <body>
-    <div class="max-w-xs md:max-w-2xl mx-auto mt-20">
+    <div class="max-w-xs md:max-w-2xl mx-auto mt-20 pb-20">
       <!-- title -->
 
       <div class="flex gap-6">
