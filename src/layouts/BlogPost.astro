@@ -23,19 +23,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       <!-- title -->
 
       <div class="flex flex-col gap-2">
-        <div class="flex flex-col gap-4">
-          <Image
-            src={profileImage}
-            alt="Arseniy Shishaev"
-            width={1000}
-            height={1000}
-            class="rounded-full w-14 h-14 object-cover object-top"
-          />
+        <a href="/">
+          <div class="flex flex-col gap-4">
+            <Image
+              src={profileImage}
+              alt="Arseniy Shishaev"
+              width={1000}
+              height={1000}
+              class="rounded-full w-14 h-14 object-cover object-top"
+            />
 
-          <a href="/" class="text-sm font-light text-zinc-400"
-            >Arseniy Shishaev</a
-          >
-        </div>
+            <a href="/" class="text-sm font-light text-zinc-400"
+              >Arseniy Shishaev</a
+            >
+          </div>
+        </a>
 
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2 mt-4">
