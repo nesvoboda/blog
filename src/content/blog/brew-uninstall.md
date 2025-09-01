@@ -2,7 +2,7 @@
 title: "One year without alcohol"
 description: "Why I ran brew uninstall"
 pubDate: "Sep 1 2025"
-heroImage: "../../assets/no-beer-hero.jpg"
+heroImage: "../../assets/brew-uninstall-hero.jpg"
 ---
 
 # **Background**
