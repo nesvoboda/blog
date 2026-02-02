@@ -39,6 +39,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           </div>
         </a>
 
+        <!-- Navigation Tabs -->
+        <div class="mt-4 border-zinc-200">
+          <nav class="flex gap-6">
+            <a href="/">
+              <button
+                class="text-sm pb-1 border-b-1 border-transparent text-zinc-400 font-light"
+              >
+                About
+              </button>
+            </a>
+            <a href="/writing">
+              <button
+                class="text-sm pb-1 border-b-1 border-zinc-900 text-zinc-900 font-light"
+              >
+                Writing
+              </button>
+            </a>
+          </nav>
+        </div>
+
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2 mt-4">
             <h1 class="text-xl font-semibold text-zinc-900">{title}</h1>
