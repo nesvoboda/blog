@@ -7,7 +7,7 @@ heroImage: "../../assets/bad-people-hero.jpg"
 
 In 2024, the YouTube channel [School of Hard Knocks](https://www.youtube.com/@theschoolofhardknocks) [interviewed](https://www.youtube.com/watch?v=qQIKf7YQBbA) a few people in Beverly Hills asking them how they got rich. One of them was [Stephen Cloobeck](https://en.wikipedia.org/wiki/Stephen_J._Cloobeck), the founder of Diamond Resorts International in Los Angeles.
 
-A phrase that he said in the interview that stuck with me:
+A phrase that he said in the interview stuck with me:
 
 > You got to stay out of one zip code, the zip code of bad people. If they’re around in your life, make them go away.
 
